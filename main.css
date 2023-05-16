@@ -1,0 +1,66 @@
+header {
+    width: 100%;
+    height: 60px;
+    background-color: red;
+    padding: 0;
+}
+
+header > div {
+    display: flex;
+    flex-direction: row;
+    /* flex- */
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+main {
+    margin: 1vw auto;
+    width: 98vw;
+    height: 98vw;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-rows: repeat(5, minmax(20px, 1fr));
+    grid-template-columns: repeat(5, minmax(20px, 1fr));
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    user-select: none;
+
+}
+
+.card[data-color="1"] {
+    background-color: lightcoral;
+}
+
+.card[data-color="2"] {
+    background-color: lightgreen;
+}
+
+.card[data-color="3"] {
+    background-color: lightskyblue;
+}
+
+
+.card[data-color="4"] {
+    background-color: lightseagreen;
+}
+
+.card[data-color="5"] {
+    background-color: lightslategray;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+    <title>Visualize Arrays</title>
+</head>
+<body>
+    <header>
+        <div>
+            <button type="button" onclick="addElement()">Add</button>
+            <button type="button" onclick="removeElement()">Del</button>
+            <button type="button" onclick="fill()">Fill</button>
+
+            <div>
+                <input type="number" id="rows" min="1" max="50" value="5" onchange="changeRows()"/>
+                x
+                <input type="number" id="cols" min="1" max="50" value="5" onchange="changeCols()"/>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+        </div>
+    </main>
+</body>
+</html>
