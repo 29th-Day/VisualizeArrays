@@ -11,15 +11,20 @@
 <body>
     <header>
         <div>
-            <button type="button" onclick="addElement()">Add</button>
-            <button type="button" onclick="removeElement()">Del</button>
-            <button type="button" onclick="fill()">Fill</button>
-
-            <div>
-                <input type="number" id="rows" min="1" max="50" value="5" onchange="changeRows()"/>
-                x
-                <input type="number" id="cols" min="1" max="50" value="5" onchange="changeCols()"/>
+            <div id="logo">
+                Visualize Arrays
             </div>
+            <nav>
+                <button type="button" onclick="addElement()">Add</button>
+                <button type="button" onclick="removeElement()">Delete</button>
+                <button type="button" onclick="fill()">Fill</button>
+
+                <div id="dimensions">
+                    <input type="number" id="rows" min="1" max="50" value="5"/>
+                    <span>x</span>
+                    <input type="number" id="cols" min="1" max="50" value="5" onchange="changeCols()"/>
+                </div>
+            </nav>
         </div>
     </header>
     <main>

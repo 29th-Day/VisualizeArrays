@@ -16,22 +16,26 @@ function addElement() {
 
     let number = document.createElement("abbr");
     number.innerText = grid.childElementCount;
-    number.title = `Y: ${Math.floor(grid.childElementCount / rows.value)}, X: ${grid.childElementCount % rows.value}`;
+    number.title = `Y: ${Math.floor(grid.childElementCount / parseInt(rows.value))}, X: ${grid.childElementCount % rows.value}`;
 
     e.appendChild(number);
 
     grid.appendChild(e);
+
+    if (grid.childElementCount > parseInt(rows.value) * parseInt(cols.value))
+    {
+        rows.value = parseInt(rows.value) + 1;
+    }
 }
 
 function removeElement() {
     grid.removeChild(grid.lastChild);
+
+    rows.value = Math.ceil(grid.childElementCount / parseInt(cols.value));
 }
 
 function fill() {
-    changeRows();
-    changeCols();
-
-    n = rows.value * cols.value;
+    n = parseInt(rows.value) * parseInt(cols.value);
 
     if (grid.childElementCount < n) {
         for (let i = grid.childElementCount; i < n; i++) {
@@ -53,13 +57,8 @@ function resetHighlight(card) {
     return false;
 }
 
-function changeRows() {
-    grid.style.gridTemplateRows = `repeat(${rows.value}, 50px)`;
-}
-
 function changeCols() {
     grid.style.gridTemplateColumns = `repeat(${cols.value}, 50px)`;
-
 }
 
 fill();
